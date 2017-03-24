@@ -34,6 +34,7 @@ For examples see [`dev/`](dev/).
 #### Props
 Name | type | default | description
 ---:| --- | ---| ---
+target | String | null | Will attach toggling on given element, resolved by `querySelector`.
 fixed-screen-size | Number | 992 | Used with `fixed`. Above this size, the menu will stay opened.
 fixed | Boolean | false | should always show on large screens
 open | Boolean | false | set to open / close
