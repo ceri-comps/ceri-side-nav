@@ -18,7 +18,7 @@ npm install --save-dev ceri-side-nav
 window.customElements.define("ceri-side-nav", require("ceri-side-nav"))
 ```
 ```html
-<ceri-side-nav target=nav-toggle>
+<ceri-side-nav target=#nav-toggle>
   <li>First Text<li>
 </ceri-side-nav>
 <!-- margin on sibling elements will be set to when side-nav gets fixed -->
