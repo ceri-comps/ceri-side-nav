@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+@import "~materialize-css/sass/components/mixins";
+
+// all colors:
+// @import "~materialize-css/sass/components/color";
+
+// BEGIN: only specific colors
+@import "~ceri-materialize/color";
+// include colors you need
+@import "~ceri-materialize/colorProcessor";
+// END: only specific colors
+
+@import "~materialize-css/sass/components/variables";
+@import "~materialize-css/sass/components/normalize";
+@import "~materialize-css/sass/components/typography";
+@import "~materialize-css/sass/components/global";
+
+// modify variables here
+// all available sass variables:
+// https://github.com/Dogfalo/materialize/blob/master/sass/components/_variables.scss
+// e.g. $dropdown-bg-color: black;
+
+// css only, no JS needed for these
+// activate only what you need
+$roboto-font-path: "~materialize-css/fonts/roboto/";
+//@import "~materialize-css/sass/components/roboto";
+//@import "~materialize-css/sass/components/icons-material-design"; // icons are no long included in materializeCSS
+@import "~materialize-css/sass/components/buttons";
+@import "~materialize-css/sass/components/grid";
+//@import "~materialize-css/sass/components/navbar";
+//@import "~materialize-css/sass/components/preloader";
+//@import "~ceri-materialize/forms";
+
+// css for js modules
+// activate only what you need
+@import "../materialize";

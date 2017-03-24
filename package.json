@@ -1,0 +1,55 @@
+{
+  "name": "ceri-side-nav",
+  "description": "a touch enabled, responsive side-nav",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ceri-comps",
+  "author": {
+    "name": "Paul Pflugradt",
+    "email": "paul.pflugradt@gmail.com"
+  },
+  "license": "MIT",
+  "main": "side-nav.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ceri-comps/ceri-side-nav"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "files": [
+    "*.js",
+    "*.scss"
+  ],
+  "dependencies": {
+    "ceri": "^1.0.3"
+  },
+  "devDependencies": {
+    "ceri-materialize": "^1.0.0",
+    "ceri-compiler": "^1.0.0",
+    "ceri-dev-server": "^1.0.0",
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.12.3",
+    "css-loader": "^0.27.3",
+    "gh-pages": "^0.12.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.3",
+    "script-runner": "^0.1.6"
+  },
+  "keywords": [
+    "side-nav",
+    "ceri"
+  ],
+  "readmeFilename": "README.md",
+  "scripts": {
+    "build:coffee": "coffee -c -o . src/side-nav.coffee",
+    "build:bundle": "ceri-compiler -b side-nav.js",
+    "build": "run-npm build:*",
+    "dev": "ceri-dev-server",
+    "watch": "ceri-dev-server --test --watch",
+    "test": "ceri-dev-server --test",
+    "preversion": "npm test",
+    "version": "npm run build && git add .",
+    "postversion": "git push && git push --tags && npm publish",
+    "ghpages": "ceri-dev-server --static static/ && gh-pages -d static"
+  }
+}

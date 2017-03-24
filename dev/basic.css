@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+}
+ceri-side-nav:not(.materialize) {
+  border:1px solid black;
+  background-color: white;
+  width:200px;
+  padding: 20px;
+}
+.container {
+  width: 100%
+}
