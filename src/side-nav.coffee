@@ -72,6 +72,10 @@ module.exports = ceri
     zIndex:
       type:Number
       default: 1000
+      cbs: (val,old) ->
+        s = @style
+        return if s.zIndex and s.zIndex != old
+        s.zIndex = val
 
   data: -> isFixed: null, keepOpen: true, dhZIndex: null
 
@@ -80,7 +84,7 @@ module.exports = ceri
     active: "dismissable"
     animate: "toggleAnimate"
     delay: true
-    onClose: -> @dhZIndex = @zIndex-1; @hide.call(@)
+    onClose: -> @style.zIndex = @zIndex; @dhZIndex = @zIndex-1; @hide.call(@)
     onOpen: (zIndex) -> @style.zIndex = zIndex+2; @dhZIndex = zIndex+1
 
   draghandle:
@@ -172,7 +176,6 @@ module.exports = ceri
     makeFixed: (fixed) ->
       if fixed != @isFixed
         @isFixed = fixed
-        @setParentMargin()
         @$emit name:"fixed", detail:fixed
     setParentMargin: ->
       if @parentElement
@@ -193,15 +196,15 @@ module.exports = ceri
           @wasOpened = @open
           if @isFixed
             @show(false)
+            @setParentMargin()
           else
+            @setParentMargin()
             @hide(false)
-          @setParentMargin()
       else
         @makeFixed(false)
+        @setParentMargin()
         if not @openingOrOpen or not @wasOpened 
           @hide(false)
-        @setParentMargin()
-
     enter: (o) ->
       o.style = translateX: [@fac*100,0,"%"]
       return @$animate(o)
