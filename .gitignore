@@ -5,3 +5,4 @@ node_modules
 npm-debug.log
 static
 *.js
+shrinkwrap.yaml

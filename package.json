@@ -21,19 +21,20 @@
     "*.scss"
   ],
   "dependencies": {
-    "ceri": "^1.0.3"
+    "ceri": "^1.0.19"
   },
   "devDependencies": {
-    "ceri-materialize": "^1.0.0",
-    "ceri-compiler": "^1.0.0",
-    "ceri-dev-server": "^1.0.0",
-    "coffee-loader": "^0.7.2",
-    "coffee-script": "^1.12.3",
-    "css-loader": "^0.27.3",
-    "gh-pages": "^0.12.0",
-    "node-sass": "^4.5.0",
-    "sass-loader": "^6.0.3",
-    "script-runner": "^0.1.6"
+    "ceri-compiler": "^1.1.1",
+    "ceri-dev-server": "^1.0.7",
+    "ceri-materialize": "^1.0.1",
+    "coffee-loader": "^0.7.3",
+    "coffee-script": "^1.12.6",
+    "css-loader": "^0.28.4",
+    "gh-pages": "^1.0.0",
+    "materialize-css": "^0.99.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "script-runner": "^0.1.7"
   },
   "keywords": [
     "side-nav",

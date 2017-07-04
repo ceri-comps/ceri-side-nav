@@ -8,5 +8,5 @@ ceri-side-nav:not(.materialize) {
   padding: 20px;
 }
 .container {
-  width: 100%
+  width: 100% !important
 }

@@ -1,37 +1,3 @@
-
-# div
-#   drag-handle(
-#     @move="move"
-#     @max="open(false)"
-#     @aborted="hide"
-#     v-bind:disabled="opened || isFixed"
-#     v-bind:max-right="right ? null : width"
-#     v-bind:max-left="right ? width : null"
-#     v-bind:z-index="overlayZIndex"
-#     v-bind:style="{width: '20px',left:right ? null : '0',right:right ? '0' : null}"
-#   )
-#   drag-handle(
-#     @move="move"
-#     @max="close(false)"
-#     @aborted="show"
-#     v-bind:disabled="!opened || isFixed"
-#     v-bind:max-right="right ? width : null"
-#     v-bind:max-left="right ? null : width"
-#     v-bind:offset="right ? -width : width"
-#     v-bind:z-index="overlayZIndex"
-#     v-bind:style="{left:'0',right:'0'}"
-#     @clean-click="dismiss"
-#   )
-
-#   ul(
-#     v-bind:id="id"
-#     ref="nav"
-#     @click="onClick"
-#     @keyup.esc="dismiss"
-#     v-bind:style="computedStyle"
-#     v-bind:class="computedClass"
-#     )
-#     slot
 ceri = require "ceri/lib/wrapper"
 module.exports = ceri
 
