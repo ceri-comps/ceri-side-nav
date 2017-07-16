@@ -46,6 +46,6 @@ module.exports = createView
     fixed: false
     materialize: false
     fixedScreenSize: 992
-  tests: (env) ->
-    describe "side-nav", ->
-      it "should work", ->
+  tests: sideNav: ->
+    it "should work", =>
+      should.exist @
