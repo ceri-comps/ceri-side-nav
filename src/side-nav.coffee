@@ -31,6 +31,7 @@ module.exports = ceri
     fixed:
       type: Boolean
       cbs: "processFixed"
+      delay: true
     fixedScreenSize:
       type: Number
       default: 992
@@ -122,13 +123,14 @@ module.exports = ceri
       type: "#"
       name: "if"
       activate: "_target"
-      value: ->
-        return false if @isFixed
-        return true
+      value: "isFixed"
+      not: true
   initStyle:
     position: "fixed"
     height: "100%"
-    willChange: "transform"
+  computedStyle:
+    this: ->
+      willChange: if @isFixed then null else "transform"
 
   computed:
     _target: -> 
