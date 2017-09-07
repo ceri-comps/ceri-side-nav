@@ -1,10 +1,10 @@
-require "./materialize.config.scss"
-require "./basic.css"
+require "./materialize.config.styl"
 window.customElements.define "ceri-side-nav", require "../src/side-nav.coffee"
 createView = require "ceri-dev-server/lib/createView"
 module.exports = createView
   mixins:[
     require "ce/#if"
+    require "ce/watch"
   ]
   structure: template 1, """
   <ceri-side-nav :right="right" :fixed="fixed" :fixed-screen-size="fixedScreenSize" #ref="sideNav" target=#toggle :class=class>

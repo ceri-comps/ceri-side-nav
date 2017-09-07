@@ -65,6 +65,10 @@ npm run dev
 ```
 Browse to `http://localhost:8080/`.
 
+## Notable changes
+#### 0.2.0
+- use ceri-materialize@2
+
 ## License
 Copyright (c) 2016 Paul Pflugradt
 Licensed under the MIT license.
